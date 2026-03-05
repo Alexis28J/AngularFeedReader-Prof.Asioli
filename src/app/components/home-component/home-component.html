@@ -2,6 +2,9 @@
     @for (news of rssServ.news(); track $index) {
         <div>
             <h3>{{news.title}}</h3>
+            <div>
+                <span>{{news.origin}}-{{news.pubDate}}</span>
+            </div>
             <p [innerHTML]="news.description"></p>
             <a href="{{news.url}}">vai al sito</a>
         </div>
